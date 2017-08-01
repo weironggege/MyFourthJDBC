@@ -1,0 +1,26 @@
+<c3p0-config>
+
+	
+	
+
+	<!-- This app is massive! -->
+	<named-config name="helloc3p0">
+		<!-- 指定连接数据源的基本属性 -->
+		<property name="user">root</property>
+		<property name="password">bottle19920314</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/mysql</property>
+	
+	
+		<property name="acquireIncrement">5</property>
+		<property name="initialPoolSize">5</property>
+		<property name="minPoolSize">5</property>
+		<property name="maxPoolSize">10</property>
+
+		<!-- intergalactoApp adopts a different approach to configuring statement 
+			caching -->
+		<property name="maxStatements">20</property>
+		<property name="maxStatementsPerConnection">5</property>
+		
+	</named-config>
+</c3p0-config>
